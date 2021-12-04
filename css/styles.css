@@ -2,4 +2,11 @@ h2 {
   color: #20C997;
 }
 
+* {
+  font-family: "Josefin sans";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /*# sourceMappingURL=styles.css.map */

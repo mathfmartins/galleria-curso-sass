@@ -2,7 +2,7 @@
 @use 'mixins'
 
 h2
-    color: variables.$secondary-color
+    color: variables.$text-color
 
 * 
     font-family: 'Josefin sans'
@@ -62,3 +62,32 @@ body
 
                 a:hover 
                     color: variables.$primary-color
+
+.gallery 
+    @include mixins.container
+    display: grid
+    grid-template-columns: repeat(3, 246px)
+    grid-template-rows: repeat(3, 400px)
+    row-gap: 4%
+    justify-content: space-between
+    padding: 0 
+
+    &__card-title 
+        font-size: 2rem
+        font-weight: 300
+        margin-bottom: 1rem
+        
+
+    &__card-btn 
+        padding: 0.6rem 2rem
+        border: 1px solid variables.$primary-color
+        background-color: variables.$bg-color
+        color: variables.$primary-color
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 1px
+
+        &:hover
+            color: variables.$bg-color
+            background-color: variables.$primary-color  
+

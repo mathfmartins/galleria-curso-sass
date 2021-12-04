@@ -1,5 +1,5 @@
 h2 {
-  color: #20C997;
+  color: #777;
 }
 
 * {
@@ -67,6 +67,36 @@ body ul {
 }
 .header__social-media ul li a:hover {
   color: #FFF;
+}
+
+.gallery {
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 246px);
+  grid-template-rows: repeat(3, 400px);
+  row-gap: 4%;
+  justify-content: space-between;
+  padding: 0;
+}
+.gallery__card-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.gallery__card-btn {
+  padding: 0.6rem 2rem;
+  border: 1px solid #FFF;
+  background-color: #000;
+  color: #FFF;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.gallery__card-btn:hover {
+  color: #000;
+  background-color: #FFF;
 }
 
 /*# sourceMappingURL=styles.css.map */

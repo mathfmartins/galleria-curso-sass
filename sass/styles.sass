@@ -35,4 +35,30 @@ body
         ul
             height: 100%
             @include mixins.flex-center
-        
+
+            li
+                margin: 0 0.5rem
+                text-transform: uppercase
+                font-size: .8rem
+
+                .active 
+                    color: variables.$secondary-color
+                
+                a 
+                    cursor: pointer
+                    display: block
+                    padding: 16px
+
+                    &:hover
+                        color: variables.$secondary-color
+
+    &__social-media 
+        ul
+            @include mixins.flex-center
+            height: 100%
+
+            li 
+                margin: 0 0.5rem
+
+                a:hover 
+                    color: variables.$primary-color

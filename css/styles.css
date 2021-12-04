@@ -30,6 +30,11 @@ body ul {
   padding: 1.5rem 0;
   margin: 0 auto;
 }
+@media (max-width: 425px) {
+  .header {
+    padding: 1.1rem;
+  }
+}
 .header__brand {
   color: #FFF;
   font-size: 3rem;
@@ -39,6 +44,16 @@ body ul {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 425px) {
+  .header__navbar ul {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__navbar ul {
+    display: none;
+  }
 }
 .header__navbar ul li {
   margin: 0 0.5rem;
@@ -62,6 +77,11 @@ body ul {
   justify-content: center;
   height: 100%;
 }
+@media (max-width: 425px) {
+  .header__social-media ul {
+    display: none;
+  }
+}
 .header__social-media ul li {
   margin: 0 0.5rem;
 }
@@ -79,6 +99,21 @@ body ul {
   row-gap: 4%;
   justify-content: space-between;
   padding: 0;
+}
+@media (max-width: 425px) {
+  .gallery {
+    grid-template-columns: 380px;
+    grid-template-rows: repeat(9, 400px) 50px;
+    justify-content: center;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 }
 .gallery__card-content {
   align-items: center;

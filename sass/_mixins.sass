@@ -18,15 +18,43 @@
     filter: grayscale(100%)
     transition: 0.6s
 
-    &:hover 
+    &:over 
         background-size: 110%
         filter: grayscale(0%)
         background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url('/img/#{$img}')
 
 @mixin mobile
     @media (max-width: 567px)
+        .menu-icon
+            display: inline-block
+            cursor: pointer
+            color: variables.$primary-color
+            font-size: 2.5rem
+
+        .header
+            &__brand 
+                display: none
+            &__navbar
+                height: 40px
+                transition: .5s
+            &__ul    
+               position: relative
+               width: 80vw
+               top: -300px
+               transition: 4s
+               flex-direction: column
+               transition: .5s
+
+        .active-menu
+            top:0
+            height: 300px !important
+        
         @content
 
 @mixin tablet
     @media (min-width: 568px) and (max-width: 1020px)
+        .active-menu
+            display: none
+        .menu-icon
+            display: none
         @content

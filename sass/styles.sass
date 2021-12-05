@@ -21,6 +21,10 @@ body
     ul
         list-style: none
 
+.menu-icon 
+    display: none
+
+
 .header
     align-items: center
     display: flex
@@ -36,9 +40,8 @@ body
     &__navbar
         ul
             height: 100%
-            @include mixins.flex-center
+            @include mixins.flex-center 
             @include mixins.mobile
-                display: none
 
             li
                 margin: 0 0.5rem
@@ -118,7 +121,7 @@ body
         &:hover
             color: variables.$bg-color
             background-color: variables.$primary-color
-
+    
     #card-1
         @include mixins.bg-img('animais.jpg')
     #card-2

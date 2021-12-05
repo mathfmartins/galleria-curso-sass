@@ -40,8 +40,6 @@ body
             @include mixins.mobile
                 display: none
 
-            @include mixins.tablet
-                display: none
             li
                 margin: 0 0.5rem
                 text-transform: uppercase
@@ -60,10 +58,12 @@ body
 
     &__social-media
         ul
+            height: 100%
             @include mixins.flex-center
             @include mixins.mobile
                 display: none
-            height: 100%
+            @include mixins.tablet
+                display: none
 
             li
                 margin: 0 0.5rem
@@ -74,21 +74,25 @@ body
 .gallery
     @include mixins.container
     display: grid
-    grid-template-columns: repeat(3, 346px)
+    grid-template-columns: repeat(3, minmax(250px, 346px))
     grid-template-rows: repeat(3, 400px) 200px
-    row-gap: 4%
+    gap: 4%
     justify-content: space-between
     padding: 0
     @include mixins.mobile
-        grid-template-columns: 380px
+        grid-template-columns: 440px
         grid-template-rows: repeat(9, 400px) 50px
         justify-content: center
-        row-gap: 20px
+        gap: 2rem
+        padding: 0
 
     @include mixins.tablet
         justify-content: center
         grid-template-columns: 1fr 1fr
+        grid-template-rows: repeat(5, 400px) 20px
         gap: 10px
+        #card-9
+            grid-column: span 2
 
     &__card-content 
         align-items: center

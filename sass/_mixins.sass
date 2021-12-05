@@ -24,9 +24,9 @@
         background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url('/img/#{$img}')
 
 @mixin mobile
-    @media (max-width: 425px)
+    @media (max-width: 567px)
         @content
 
 @mixin tablet
-    @media (max-width: 768px)
+    @media (min-width: 568px) and (max-width: 1020px)
         @content

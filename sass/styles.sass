@@ -26,9 +26,7 @@ body
 
 
 .header
-    align-items: center
-    display: flex
-    justify-content: space-between
+    @include flex(center, space-between)
     @include mixins.container
     @include mixins.mobile
         padding: 1.1rem
@@ -40,7 +38,7 @@ body
     &__navbar
         ul
             height: 100%
-            @include mixins.flex-center 
+            @include mixins.flex(center, center) 
             @include mixins.mobile
 
             li
@@ -62,7 +60,7 @@ body
     &__social-media
         ul
             height: 100%
-            @include mixins.flex-center
+            @include mixins.flex(center, space-between)
             @include mixins.mobile
                 display: none
             @include mixins.tablet
@@ -98,11 +96,8 @@ body
             grid-column: span 2
 
     &__card-content 
-        align-items: center
-        display: flex
-        flex-direction: column
+        @include flex(center, center, column)
         height: 100%
-        justify-content: center
 
     &__card-title
         color: variables.$primary-color
